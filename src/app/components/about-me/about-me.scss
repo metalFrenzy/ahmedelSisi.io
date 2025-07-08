@@ -1,0 +1,33 @@
+.about-me-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  width: 100%;
+  margin-left: 5rem;
+  margin-top: 4rem;
+  margin-right: 5rem;
+  gap: 2rem;
+}
+
+.text {
+  margin-right: 5rem;
+}
+
+.text h1 {
+  align-self: top;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #8885ef;
+}
+
+.text p {
+  font-weight: 400;
+  color: #06152f;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+
+.image {
+    display: grid;
+    justify-self: start;
+}
