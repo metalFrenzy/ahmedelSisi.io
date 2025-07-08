@@ -8,11 +8,14 @@
   justify-content: start;
   position: relative;
   text-align: left;
+  padding: 0 5rem; // desktop spacing
+  overflow-x: hidden;
 }
 
 .text-overlay {
   color: white;
-  margin-left: 5rem;
+  max-width: 700px;
+  width: 100%;
 }
 
 .text-overlay h1 {
@@ -30,16 +33,17 @@
 .action-buttons {
   display: flex;
   gap: 1.5rem;
+  flex-wrap: wrap;
 }
 
 .view,
 .download {
-  all: unset;
   font-size: 1rem;
   padding: 0.75rem 1rem;
   border-radius: 6px;
   font-family: "Cabin", sans-serif;
   transition: all 0.25s ease-in-out;
+  cursor: pointer;
 }
 
 .view {
@@ -70,9 +74,13 @@
   }
 }
 
+//
+// --------- Responsive Section ---------
+//
+
 @media screen and (max-width: 1024px) {
-  .text-overlay {
-    margin-left: 3rem;
+  .cover-page {
+    padding: 0 3rem;
   }
 
   .text-overlay h1 {
@@ -89,14 +97,15 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    padding: 2rem;
-    text-align: left;
+    padding: 2rem 1.5rem;
+    height: auto;
     background-position: top;
   }
 
   .text-overlay {
-    margin-left: 0;
     margin-top: 2rem;
+    padding: 0;
+    width: 100%;
   }
 
   .text-overlay h1 {
@@ -111,6 +120,7 @@
   .action-buttons {
     flex-direction: column;
     gap: 1rem;
+    width: 100%;
   }
 
   .view,
@@ -121,16 +131,15 @@
 }
 
 @media screen and (max-width: 480px) {
+  .cover-page {
+    padding: 1.5rem;
+  }
+
   .text-overlay h1 {
     font-size: 1.75rem;
   }
 
   .text-overlay p {
     font-size: 0.95rem;
-  }
-
-  .cover-page {
-    height: auto;
-    padding-bottom: 2rem;
   }
 }
