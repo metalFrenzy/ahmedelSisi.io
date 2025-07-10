@@ -1,0 +1,67 @@
+.tech {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #8885ef;
+}
+
+.tech-stack {
+  margin-top: 4rem;
+  padding: 0 5rem;
+}
+
+.stack-scroll {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.stack {
+  display: flex;
+  gap: 2rem;
+  padding: 1.5rem 0 1rem 0;
+  width: max-content;
+  animation: scroll 20s linear infinite;
+}
+
+.stack img {
+  width: 87px;
+  height: 87px;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.15) rotate(2deg);
+  }
+}
+
+/* Animation Keyframes */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .tech-stack {
+    padding: 0 2rem;
+  }
+
+  .tech {
+    font-size: 2.25rem;
+  }
+
+  .stack {
+    gap: 1.5rem;
+    animation: scroll 30s linear infinite;
+  }
+
+  .stack img {
+    width: 70px;
+    height: 70px;
+  }
+}
